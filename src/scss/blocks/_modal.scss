@@ -1,0 +1,314 @@
+.modal {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    z-index: 100;
+
+    background-color: rgba(0,0,0,.6);
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Roboto";
+
+    &__inner {
+        width: 56vw;
+        max-width: 1080px;
+        min-width: 750px;
+        
+        position: relative;
+
+        padding-top: 60px;
+        padding-bottom: 70px;
+
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 33px;
+
+        text-align: center;
+        
+        color: #000000;
+    }
+
+    &__form {
+        margin-top: 46px;
+        width: 60%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        padding: 15px 37px;
+
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+
+        color: $grey2;
+
+        border: 2px solid #000000;
+
+        & + & {
+            margin-top: 20px;
+        }
+    }
+
+    &__submit {
+        margin-top: 37px;
+        padding: 20px;
+
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+
+        background-color: #FAFF09;
+
+        border: none;
+
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: #ccce63;
+        }
+    }
+
+    &__close {
+        padding: 10px;
+
+        position: absolute;
+        top: 39px;
+        right: 40px;
+
+        cursor: pointer;
+
+        span {
+            display: block;
+            height: 3px;
+            width: 36px;
+
+            background-color: $grey2;
+
+            transform: rotateZ(45deg);
+
+            transition: all 0.3s;
+
+            &:last-child {
+                transform: rotateZ(-45deg) translate(2px, -2px);
+            }
+        }
+
+        &_white {
+            span {
+                background-color: #fff;
+            }
+        }
+
+        &:hover {
+            span {
+                background-color: #000;
+            }
+        }
+
+    }
+
+    &__img {
+        position: absolute;
+
+        overflow: hidden;
+
+        width: 75vw;
+
+        img {
+            width: 100%;
+            max-height: 80vh;
+            filter:brightness(0.6);
+
+        }
+
+        &-text {
+            bottom: 10%;
+            left: 50px;
+            right: 50px;
+            position: absolute;
+            z-index: 100;
+
+            color: #FFFFFF;
+        }
+
+        &-title {
+            font-weight: 300;
+            font-size: 36px;
+            line-height: 42px;
+
+            position: relative;
+            padding-left: 40px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+
+                width: 21px;
+                height: 21px;
+                background-color: #fff;
+            }
+        }
+
+        &-descr {
+            margin-top: 42px;
+
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 197.69%;
+        }
+    }
+
+    &.opened {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:930px) {
+    .modal {
+        &__inner {
+            width: 90vw;
+            max-width: unset;
+            min-width: unset;
+
+        }
+
+        &__form {
+            margin-top: 23px;
+            width: 70%;
+        }
+    
+        &__input {
+            padding: 15px 26px;
+
+            font-size: 18px;
+            line-height: 21px;
+
+            & + & {
+                margin-top: 15px;
+            }
+        }
+    
+        &__submit {
+            margin-top: 26px;
+
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &__img {
+            width: 90vw;
+            height: 70vh;
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &-text {
+                top: 40px;
+                left: 30px;
+                right: 30px;
+
+                text-align: center;
+            }
+    
+            &-title {
+                display: inline-block;
+
+                font-size: 24px;
+                line-height: 28px;
+            }
+    
+            &-descr {
+                font-size: 18px;
+                line-height: 177.19%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:520px) {
+    .modal {
+        &__inner {
+            width: 100vw;
+            border-radius: 0;
+
+            background-color: #fff;
+        }
+
+    
+        &__form {
+            margin-top: 73px;
+            width: 90%;
+        }
+    
+        &__input {
+            padding: 17px 52px;
+
+            font-size: 18px;
+            line-height: 21px;
+
+            & + & {
+                margin-top: 14px;
+            }
+        }
+
+        &__submit {
+            color: black;
+        }
+
+        &__close {
+            top: 20px;
+            right: 20px;
+        }
+
+        &__img {
+            width: 100vw;
+            height: 80vh;
+            bottom: 0;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+            }
+    
+            &-title {
+                font-size: 18px;
+                line-height: 21px;
+            }
+    
+            &-descr {
+                margin-top: auto;
+
+                font-size: 14px;
+            }
+        }
+    }
+}

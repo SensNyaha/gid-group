@@ -1,0 +1,158 @@
+.get-catalogue {
+    padding-top: 81px;
+
+
+    font-family: "Roboto";
+
+    &__inner {
+        margin-top: 54px;    
+        margin-left: 60px;
+        margin-right: 118px;
+    
+
+        display: flex;
+        gap: 107px;
+    }
+
+    &__left {
+        flex-grow: 1;
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__wrapper {
+        max-width: 677px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 146.69%;
+
+        color: #000000;
+    }
+
+    &__descr {
+        margin-top: 41px;
+
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 146.19%;
+
+        color: $grey2;
+    }
+
+    &__form {
+        margin-top: auto;
+
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .get-catalogue {
+        &__inner {
+            margin-left: 40px;
+            margin-right: 40px;
+        
+            gap: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .get-catalogue {
+        padding-top: 38px;
+
+        &__inner {
+            margin-top: 61px;    
+            margin-left: 20px;
+            margin-right: 20px;
+        
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+    
+        &__left {
+            max-height: 363px;
+
+            order: 1;
+        }
+    
+        &__img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    
+        &__wrapper {
+            margin-left: 41px;
+
+            max-width: 437px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__descr {
+            margin-top: 21px;
+
+            font-size: 18px;
+        }
+    
+        &__form {
+            margin-top: 27px;
+        }
+    }
+}
+
+@media screen and (max-width:520px) {
+    @media screen and (max-width: 930px) {
+        .get-catalogue {
+            padding-top: 53px;
+
+            &__inner {
+                margin-top: 45px;    
+                margin-left: 10px;
+                margin-right: 10px;
+            
+                gap: 50px;
+                flex-wrap: wrap;
+            }
+        
+            &__left {
+                display: none;
+            }
+
+            &__wrapper {
+                margin-left: 0;
+    
+                max-width: unset;
+
+                text-align: center;
+            }
+    
+            &__title {
+                font-size: 18px;
+            }
+    
+            &__descr {
+                margin-top: 11px;
+    
+                font-size: 14px;
+            }
+        
+            &__form {
+                margin-top: 35px;
+            }
+        }
+    }
+}

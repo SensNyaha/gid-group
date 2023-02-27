@@ -1,0 +1,176 @@
+.team {
+    padding-top: 70px;
+    padding-bottom: 29px;
+
+    border-bottom: 1px solid $grey6;
+    
+    &__grid {
+        margin-top: 160px;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(600px, 637px));
+        justify-content: space-evenly;
+        row-gap: 120px;
+        column-gap: 20px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 147.69%;
+
+        color: $grey1;
+    }
+
+    &__state {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 147.69%;
+
+        color: $grey2;
+    }
+
+    &__descr {
+        margin-top: 28px;
+
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 147.69%;
+
+        color: $grey2;
+    }
+
+    &__more {
+        margin: 84px auto 0;
+        padding: 19px 45px;
+
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        color: $grey6;
+
+        background: #000000;
+        border: 1px solid #000000;
+
+        transition: all 0.5s;
+        &:hover {
+            background: #535353;
+            border-color: #535353;
+            .team__spiral {
+                transform: rotateZ(360deg);
+            }
+        }
+    }
+    &__spiral {
+        transition: all 0.5s;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    .team {
+
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+
+            row-gap: 70px;
+        }
+
+        &__item {
+            margin: 0 auto;
+
+            width: 70%;
+
+            flex-direction: column;
+            align-items: center;
+
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .team {
+        padding-top: 100px;
+
+        &__grid {
+            margin-top: 80px;
+            margin-left: 15px;
+            margin-right: 15px;
+
+            row-gap: 60px;
+        }
+
+        &__item {
+            gap: 14px;
+
+            width: 100%;
+            max-width: 250px;
+        }
+
+        &__img {
+            max-width: 107px;
+        }
+
+        &__name {
+            font-size: 18px;
+        }
+
+        &__state {
+            margin-top: 3px;
+
+            font-size: 18px;
+        }
+
+        &__descr {
+            margin-top: 23px;
+
+            font-size: 14px;
+        }
+
+        &__more {
+            margin-top: 57px;
+            padding: 15px 42px 15px 20px;
+
+            font-size: 14px;
+            line-height: 16px;
+
+            gap: 20px;
+        }
+
+        &__spiral {
+            margin-top: -2px;
+
+            width: 19px;
+            height: 19px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .team {
+        padding-top: 74px;
+        padding-bottom: 17px;
+
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            max-width: 220px;
+        }
+
+        &__more {
+            margin-top: 31px;
+        }
+    }
+}

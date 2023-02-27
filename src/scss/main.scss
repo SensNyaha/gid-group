@@ -1,0 +1,96 @@
+@import 'base/reset';
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/fonts';
+
+// base settings
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+body {
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+button {
+    border: none;
+    background-color: transparent;
+}
+// end of base settings
+
+.dn {
+    display: none !important;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+@import 'blocks/header';
+@import 'blocks/main';
+@import 'blocks/advantages';
+@import 'blocks/pricing';
+@import 'blocks/title';
+@import 'blocks/btn';
+@import 'blocks/services';
+@import 'blocks/projects';
+@import 'blocks/present-card';
+@import 'blocks/steps';
+@import 'blocks/where';
+@import 'blocks/window';
+@import 'blocks/get-catalogue';
+@import 'blocks/mail-form';
+@import 'blocks/footer';
+@import 'blocks/menu';
+@import 'blocks/modal';
+@import 'blocks/calc';
+@import 'blocks/slide';
+@import 'blocks/form-wrap';
+@import 'blocks/quiz';
+@import 'blocks/privacy';
+
+
+@import 'blocks/crumbs';
+@import 'blocks/projects-sec';
+
+@import 'blocks/cta';
+@import 'blocks/project';
+@import 'blocks/description';
+@import 'blocks/process';
+@import 'blocks/play-btn';
+@import 'blocks/quote';
+
+@import 'blocks/repair';
+@import 'blocks/works-slider';
+@import 'blocks/undermain';
+@import 'blocks/team';
+@import 'blocks/blog-preview';
+@import 'blocks/reviews-slider';
+@import 'blocks/review-card';
+@import 'blocks/review-author';
+
+@import 'blocks/d3d';
+
+@import 'blocks/construction';
+
+@import 'blocks/contacts';
+
+@import 'blocks/ourteam';
+
+@import 'blocks/blog';
+@import 'blocks/blogpost';
+
+@import 'blocks/review';

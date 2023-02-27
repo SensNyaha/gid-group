@@ -1,0 +1,198 @@
+.header {
+    position: relative;
+
+    padding: 36px 125px 36px 104px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.9);
+    &__main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        background: rgba(0, 0, 0, 0.4);
+        padding: 36px 125px 36px 104px;
+        .header__logo {
+            position: absolute;
+            left: 50%;
+            z-index: 100;
+            transform: translateX(-50%);
+            bottom: -25px;
+            transition: all 0.3s;
+            &:hover {
+                filter: brightness(0.7)
+            }
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+
+        z-index: 100;
+
+        transform: translate(-50%, -50%);
+        transition: all 0.3s;
+
+        img {
+            height: 100%;
+        }
+        &:hover {
+            filter: brightness(0.7)
+        }
+    }
+
+    &__phone {
+        cursor: pointer;
+        transition: all 0.3s;
+
+        position: relative;
+        z-index: 100;
+
+        &:hover {
+            filter: brightness(2);
+        }
+    }
+    &__burger {
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+        position: relative;
+        z-index: 100;
+
+        span {
+            height: 4px;
+            width: 36px;
+
+            background-color: $grey4;
+            transition: all 0.5s;
+
+            &.short{
+                transition: all 0.3s;
+                width: 24px;
+                position: relative;
+                left: 0;
+            }
+        }
+
+        &:hover {
+            span {
+                filter: brightness(2);
+                &.short {
+                    left: 12px;
+                }
+            }
+        }
+
+        &.opened {
+            span {
+                &:first-child {
+                    transform: rotateZ(45deg);
+                    transform-origin: left top;
+                }
+                &:last-child {
+                    transform: rotateZ(-45deg) translateY(-3px);;
+                    transform-origin: left top;
+                }
+    
+                &.short{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .header {
+        padding: 14px 100px 14px 84px;
+        
+        &__main {
+            padding: 23px 100px 23px 84px;
+            .header__logo {
+                transform: translateX(-50%) scale(0.8);
+                bottom: -15px;
+            }
+        }
+        &__burger {
+            gap: 7px;
+            &.opened {
+                span {
+                    &:first-child {
+                        transform: rotateZ(45deg);
+                        transform-origin: left top;
+                    }
+                    &:last-child {
+                        transform: rotateZ(-45deg) translateY(0px) translateX(-4px);
+                        transform-origin: left top;
+                    }
+        
+                    &.short{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .header {
+        padding: 14px;
+    
+        &__main {
+            padding: 36px 50px;
+            
+            .header__logo {
+                bottom: -25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .header {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+    
+        // padding: 14px 125px 14px 104px;
+    
+    
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+    
+        // background: rgba(0, 0, 0, 0.9);
+        &__main {
+            background: transparent;
+            padding: 59px 20px 0px 22px;
+            .header__logo {
+                bottom: -70px;
+
+                transition: all 0.5s;
+
+                &.opened {
+                    bottom: -20px;
+                }
+            }
+        }
+
+        &__logo {
+            height: calc(100% - 14px);
+        }
+    
+        &__phone {
+            filter: brightness(1.5);
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.project {
+    &__nav {
+        display: flex;
+        justify-content: center;
+        gap: 26px;
+
+
+        &-item {
+            button {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                width: 209px;
+
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 21px;
+
+                text-align: center;
+
+                color: #000;
+
+                transition: all 0.5s;
+
+                border: 1px solid black;
+            }
+
+            &.chosen, &:hover {
+                button {
+                    color: #fff;
+                    background-color: #000;
+                }
+
+            }
+        }
+    }
+
+    &__inner {
+        margin: 28px auto 0;    
+
+        max-width: 1920px;
+    }
+
+    &__content {
+        margin-bottom: 30px;
+
+        border-bottom: 1px solid $grey4;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .project {
+        &__nav {
+            margin-top: 37px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .project {
+        &__nav {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-top: 23px;
+
+            gap: 10px;
+
+            &-item {
+                width: calc(50% - 5px);
+                button {
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+
+                    width: 100%;
+
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}

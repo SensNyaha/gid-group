@@ -1,0 +1,171 @@
+.undermain {
+    padding: 62px 15px;
+    background: $grey6;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    &__item {
+        max-width: 410px;
+
+        &_minw240 {
+            min-width: 240px;
+        }
+    }
+
+    &__hi {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 56px;
+
+        color: #000000;
+
+        span {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 33px;
+        }
+    }
+
+    &__low {
+        margin-top: 26px;
+        position: relative;
+
+        padding-left: 26px;
+
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 33px;
+
+        color: $grey2;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+
+            background-color: $grey1;
+
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__img {
+        img {
+            padding-top: 10px;
+            padding-bottom: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .undermain {
+        justify-content: space-between;
+        gap: 10px;
+        
+        &__hi {
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        &__low {
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        &__img {
+            img {
+                padding-top: 8px;
+                padding-bottom: 0px;
+                height: 36px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .undermain {
+        flex-wrap: wrap;
+
+        padding-bottom: 20px;
+
+        &__item {
+            max-width: calc(50% - 5px);
+
+            &_minw240 {
+                min-width: unset;
+            }
+        }
+
+        &__hi {
+            font-size: 28px;
+            line-height: 32px;
+
+            span {
+                font-size: 22px;
+                line-height: 28px;
+            }
+        }
+
+        &__low {
+            margin-top: 14px;
+
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .undermain {
+        margin: 27px 23px 0;
+
+        padding: 36px 42px 49px;
+
+        gap: 42px;
+        &__item {
+            max-width: unset;
+            width: 100%;
+
+            text-align: center;
+        }
+
+        &__hi {
+            font-size: 24px;
+            line-height: 28px;
+
+            span {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+        &__low {
+            margin-top: 53px;
+
+            padding-left: 0;
+
+            font-size: 14px;
+            line-height: 16px;
+
+            &:before {
+                left: 50%;
+                top: -34px;
+
+                transform: translateX(-50%);
+
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        &__img {
+            img {
+                padding-top: 0px;
+                height: 20px;
+            }
+        }
+    }
+}

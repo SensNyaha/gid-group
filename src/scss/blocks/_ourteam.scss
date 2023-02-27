@@ -1,0 +1,428 @@
+.ourteam {
+    padding: 77px 195px 70px;
+
+    overflow: hidden;
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+
+        color: #000000;
+
+    }
+    &__descr {
+        padding-top: 90px;
+
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 177.19%;
+
+        color: $grey1;
+        
+        &_main {
+            padding-top: 55px;
+            padding-bottom: 69px;
+        }
+    }
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &_12 {
+            grid-column: 2/3;
+            grid-row: 1/3;
+        }
+        &_21 {
+            img {
+                filter:brightness(0.6)
+            }
+        }
+        &_31 {
+            grid-column: 1/2;
+            grid-row: 1/3;
+
+            img {
+                padding-top: 176px;
+                padding-right: 155px
+            }
+        }
+        &_32 {
+            grid-column: 2/3;
+            grid-row: 2/4;
+        }
+        &_33 {
+            grid-row: 6/7;
+            grid-column: 1/2;
+        }
+        &_34 {
+            grid-row: 5/7;
+            grid-column: 2/3;
+        }
+    }    
+    &__text {
+
+        &_real1 {
+            margin-bottom: 60px;
+
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        &_real2 {
+            margin-top: 169px;
+            margin-bottom: 188px;
+
+            width: 512px;
+
+            grid-row: 3/6;
+        }
+        
+        &_striperight {
+            position: relative;
+            padding-right: 44px;
+
+            &:before {
+                position: absolute;
+                content: '';
+
+                top: 75px;
+                right: -50vw;
+
+                width: 100vw;
+                height: 1px;
+
+                background-color: $grey5;
+                z-index: -1;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+
+                top: 0;
+                right: 0;
+
+                width: 1px;
+                height: 391px;
+
+                background-color: $grey5;
+                z-index: -1;
+            }
+        }
+        &_stripeleft {
+            position: relative;
+            padding-left: 117px;
+
+            &:before {
+                position: absolute;
+                content: '';
+
+                top: 75px;
+                left: -50vw;
+
+                width: 100vw;
+                height: 1px;
+
+                background-color: $grey5;
+                z-index: -1;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+
+                top: 0;
+                left: 0;
+
+                width: 1px;
+                height: 391px;
+
+                background-color: $grey5;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: 49.2% 43%;
+        grid-template-rows: auto 500px;
+        justify-content: space-between;
+    }
+    &__podhod {
+        margin-top: 221px;
+
+        display: grid;
+        grid-template-columns: 35.87% 56.5%;
+        grid-template-rows: minmax(575px,1fr);
+        justify-content: space-between;
+    }
+    &__real {
+        margin-top: 190px;
+
+        display: grid;
+        grid-template-columns: 51% 40.3%;
+        grid-template-rows: minmax(572px, 1fr) 396px 397px 264px 287px 502px;
+        grid-auto-rows: 1fr;
+        justify-content: space-between;
+    }
+
+
+    &__team {
+        margin-top: 194px;
+
+        &-grid {
+            margin-top: 81px;
+
+            display: grid;
+            grid-template-columns: repeat(3, minmax(26%, 403px));
+            justify-content: space-between;
+            row-gap: 70px;
+            column-gap: 15px;
+        }
+
+        &-img {
+            width: 100%;
+            height: 602px;
+
+            position: relative;
+
+            img {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+
+        &-name {
+            margin-top: 29px;
+
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 147.69%;
+
+            color: $grey1;
+        }
+        &-job {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 147.69%;
+
+            color: $grey2;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1600px) {
+    .ourteam {
+        padding-left: 100px;
+        padding-right: 100px;
+
+        &__descr {
+            font-size: 20px;
+        }
+        &__text {
+            &_real2 {
+                width: auto;
+            }
+            &_stripeleft {
+                padding-left: 55px;
+            }
+        }
+        &__img {
+            &_31 {
+                img {
+                    padding-right: 50px;
+                    padding-top: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .ourteam {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .ourteam {
+        padding: 55px 25px 0;
+
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &__descr {
+            padding-top: 29px;
+            padding-bottom: 29px;
+
+            font-size: 14px;
+        }
+        &__text {
+            &:before {
+                top: 40px;
+                left: -100px;
+                width: 80vw;
+            }
+
+            &:after {
+                height: 199px;
+            }
+
+            &_real2 {
+                margin-top: 77px;
+                margin-bottom: 70px;
+            }
+
+            &_striperight {
+                padding-right: 15px;
+            }
+            &_stripeleft {
+                padding-left: 31px;
+            }
+        }
+        &__img {
+            &_31 {
+                img {
+                    padding-right: 25px;
+                    padding-top: 50px;
+                }
+            }
+        }
+
+        
+        &__main {
+            grid-template-rows: auto 165px;
+            grid-template-columns: 52% 43%;
+        }
+        &__podhod {
+            margin-top: 83px;
+
+            grid-template-rows: minmax(261px, 1fr);
+            grid-template-columns: 42.87% 50.5%;
+        }
+        &__real {
+            margin-top: 64px;
+
+            grid-template-rows: minmax(207px, 1fr) 120px 220px 100px min-content 200px;
+            grid-template-columns: 51% 46.3%;
+        }
+
+        &__team {
+            margin-top: 102px;
+            &-grid {
+                margin-top: 25px;
+
+                grid-template-columns: repeat(3, minmax(26%, 191px));
+            }
+            &-img {
+                height: 285px;
+            }
+            &-name {
+                margin-top: 6px;
+
+                font-size: 18px;
+            }
+            &-job {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .ourteam {
+        padding: 32px 10px 0px;
+
+        &__text {
+            padding-left: 22px;
+            padding-right: 22px;
+            margin: 0;
+            margin-top: 41px;
+
+            grid-row: unset;
+            grid-column: unset;
+
+            &:before {
+                width: 200vw;
+            }
+            
+        }
+        &__title {
+            text-align: center;
+        }
+        &__img {
+            grid-column: unset;
+            grid-row: unset;
+            
+            img {
+                padding: 0;
+            }
+
+            &_12 {
+                grid-row: 2/3;
+            }
+        }
+
+        &__main, &__podhod, &__real {
+            grid-template-columns: 1fr;
+        }
+
+        &__main {
+            grid-template-rows: auto 275px 163px;
+            row-gap: 6px;
+
+            :first-child {
+                margin-top: 0;
+            }
+        }
+        &__podhod {
+            margin-top: 0;
+
+            grid-template-rows: auto 235px;
+            row-gap: 10px;
+        }
+        &__real {
+            margin-top: 0;
+
+            grid-template-rows: auto 238px 328px auto 279px 200px;
+            row-gap: 6px;
+        }
+
+        &__team {
+            margin-top: 58px;
+
+            &-grid {
+                margin-top: 42px;
+
+                grid-template-columns: repeat(2, minmax(45%, 154px));
+                row-gap: 33px;
+            }
+            &-img {
+                height: 231px;
+            }
+            &-name {
+                margin-top: 5px;
+                font-size: 14px;
+            }
+            &-job {
+                font-size: 12px;
+            }
+        }
+    }
+}
